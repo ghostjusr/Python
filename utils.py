@@ -31,7 +31,6 @@ class WordDict:
         self.consenents = self.alphabet.difference(self.vowels)
 
     def download_wordlist(self, wordlen: int = 5, remove_proper_nouns: bool = True):
-        # download and curate default wordlist
         if INTERNET_DOWNLOAD:
             url = "https://svnweb.freebsd.org/csrg/share/dict/words?revision=61569&view=co"
             r = requests.get(url, headers={'User-Agent': 'Custom'})
@@ -44,9 +43,6 @@ class WordDict:
         if remove_proper_nouns:
             wordlist = [word for word in wordlist if word.lower() == word]
         return wordlist
-
-    def remove(self, word):
-        self.wordlist.remove(word)
 
     def get_random_word(self):
         """Get a random word"""
