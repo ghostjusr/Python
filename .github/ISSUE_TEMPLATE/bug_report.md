@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a bug report so I can try to fix whatever the bug is
 title: ''
-labels: ''
+labels: bug
 assignees: ghostjusr
 
 ---
